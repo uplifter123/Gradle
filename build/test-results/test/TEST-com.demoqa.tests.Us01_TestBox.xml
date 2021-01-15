@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.demoqa.tests.Us01_TestBox" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-01-15T21:42:56" hostname="PC" time="0.605">
+  <properties/>
+  <testcase name="Us01_TestBox_Click" classname="com.demoqa.tests.Us01_TestBox" time="0.605"/>
+  <system-out><![CDATA[https://www.demoqa.com/elements != https://www.demoqa.com/text-box
+Full Name
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
