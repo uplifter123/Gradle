@@ -2,10 +2,12 @@ package com.demoqa.utilities;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.opera.OperaDriver;
 import org.openqa.selenium.safari.SafariDriver;
 
@@ -61,5 +63,14 @@ public class Driver {
             driver.quit();  // driver'i kapat
             driver=null; // driver'in null oldugundan emin olmak icin tekrar null olarak atayalim.
         }               //Boylelikle driver'i tekrar baslatabilirim.
+    }
+    public static void hover(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).perform();
+    }
+
+    public static void hoverClick(WebElement element) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(element).click().perform();
     }
 }
