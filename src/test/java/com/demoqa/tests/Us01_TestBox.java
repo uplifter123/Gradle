@@ -38,10 +38,10 @@ public class Us01_TestBox extends TestBase {
         String [] appear = {"Full Name", "Email", "Current Address" , "Permanent Address", "Submit" };
         System.out.println(appear[0]);
         Assert.assertTrue(elementsPage.userName.getText().equals(appear[0]));
-        Assert.assertTrue(elementsPage.userEmail.getText().equals(appear[0]));
-        Assert.assertTrue(elementsPage.currentAddress.getText().equals(appear[0]));
-        Assert.assertTrue(elementsPage.permanentAddress.getText().equals(appear[0]));
-        Assert.assertTrue(elementsPage.button.getText().equals(appear[0]));
+        Assert.assertTrue(elementsPage.userEmail.getText().equals(appear[1]));
+        Assert.assertTrue(elementsPage.currentAddress.getText().equals(appear[2]));
+        Assert.assertTrue(elementsPage.permanentAddress.getText().equals(appear[3]));
+        Assert.assertTrue(elementsPage.button.getText().equals(appear[4]));
 
     }
 
