@@ -1,26 +1,21 @@
 package com.demoqa.utilities;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.BeforeMethod;
 
 import java.util.concurrent.TimeUnit;
 
 public abstract class TestBase {
-    protected WebDriver driver;
     protected Actions actions;
     @BeforeMethod
     public void setUp(){
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-        actions = new Actions(driver);
+        Driver.getDriver().get(ConfigReader.getProperty("demoqa_url"));
+        Driver.getDriver().manage().window().maximize();
+        Driver.getDriver().manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+        actions = new Actions(Driver.getDriver());
     }
     //@AfterMethod
     public void tearDown(){
-        driver.close();
+        Driver.getDriver().close();
     }
 }
